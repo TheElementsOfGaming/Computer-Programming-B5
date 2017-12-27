@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CoinDivider.unity
+    guid: dd369d27c2c59c24ead35c078b32c918
+  - enabled: 1
+    path: Assets/HelpLevel.unity
+    guid: 6856231b0e227b549896b791f0ba3432
+  - enabled: 1
+    path: Assets/Page2.unity
+    guid: 6216151bcd2009a48922589adb986e13
+  - enabled: 1
+    path: Assets/Story.unity
+    guid: 3d179c2db4e3f0043ac11bb83616c82a
