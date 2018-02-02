@@ -1,13 +1,10 @@
 ﻿<Properties StartupConfiguration="{F6572C5F-6BE9-4DF9-82C9-C96BAAABCEB8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DoItAgain/Program.cs">
-    <Files>
-      <File FileName="DoItAgain/Program.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DoItAgain PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
