@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{15EFC423-A459-4907-A66B-735860788519}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Lab_19/Program.cs">
     <Files>
-      <File FileName="Lab_19/Program.cs" Line="60" Column="2" />
+      <File FileName="Lab_19/Program.cs" Line="77" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
@@ -10,4 +10,5 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Lab__19 PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

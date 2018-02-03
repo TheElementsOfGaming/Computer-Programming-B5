@@ -11,6 +11,7 @@ namespace Lab_19
             //create a string named response
             string response;
             //create a do loop for the whole program.
+            int counter = 0;
             do
             {
                 //do loop to validate the user’s response of yes(y) or no(n)
@@ -28,6 +29,7 @@ namespace Lab_19
 
                 //if the user answered “yes(y) roll the dice 
                 if (response == "y")
+                    Console.Clear();
                 {
                     //declare two integers die1 and die2
                     int die1, die2;
@@ -40,6 +42,8 @@ namespace Lab_19
                     {
                         //print out you rolled boxcars
                         Console.WriteLine("You rolled boxcars!");
+                        Console.WriteLine("It took you {0} tries to get boxcars!", counter);
+                        counter = 0;
                     }
                     //else if die 1 == die 2 == 1
                     else if (die1 == 1 && die2 == 1)
@@ -47,14 +51,33 @@ namespace Lab_19
 
                         //print out you rolled snake eyes
                         Console.WriteLine("You rolled snake eyes!");
+                        Console.WriteLine("It took you {0} tries to get snake eyes!", counter);
+                        counter = 0;
+                    }
+                    else if (die1 == die2)
+                    {
+
+                        //print out you rolled double numbers
+                        Console.WriteLine("You rolled double {0}s", die2);
+                        counter++;
+                    }
+                    else if(response == "n"){
+						Console.WriteLine("Thank you for playing");
+						System.Environment.Exit(1);
                     }
                     //else
                     else
+                    {
                         //print out you rolled a 5 and 6, replacing the 5 and 6 wilth the real roll values
                         Console.WriteLine("You rolled {0} and a {1}", die1, die2);
+                        counter++;
+                    }
                 }
+
             } while (response != "n");
 
         }
+
+    
     }
 }
