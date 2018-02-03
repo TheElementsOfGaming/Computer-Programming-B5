@@ -3,8 +3,3 @@
 /Users/56332/Documents/Last Try/ALC-HTML5-B4/Lab_19/Lab_19/bin/Debug/Lab_19.pdb
 /Users/56332/Documents/Last Try/ALC-HTML5-B4/Lab_19/Lab_19/obj/x86/Debug/Lab_19.exe
 /Users/56332/Documents/Last Try/ALC-HTML5-B4/Lab_19/Lab_19/obj/x86/Debug/Lab_19.pdb
-C:\Users\Kyler Draper\Documents\GitHub\Computer-Programming-B5\Lab_19\Lab_19\bin\Debug\Lab_19.exe
-C:\Users\Kyler Draper\Documents\GitHub\Computer-Programming-B5\Lab_19\Lab_19\bin\Debug\Lab_19.pdb
-C:\Users\Kyler Draper\Documents\GitHub\Computer-Programming-B5\Lab_19\Lab_19\obj\x86\Debug\Lab_19.csproj.CoreCompileInputs.cache
-C:\Users\Kyler Draper\Documents\GitHub\Computer-Programming-B5\Lab_19\Lab_19\obj\x86\Debug\Lab_19.exe
-C:\Users\Kyler Draper\Documents\GitHub\Computer-Programming-B5\Lab_19\Lab_19\obj\x86\Debug\Lab_19.pdb
