@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lab_19
+namespace Lab_19_2._0
 {
     class MainClass
     {
@@ -12,21 +12,16 @@ namespace Lab_19
             string response;
             //create a counter
             int counter = 0;
-            bool display = true;                  
-             //create a do loop for the whole program.
+            //create a do loop for the whole program.
             do
             {
                 //do loop to validate the user’s response of yes(y) or no(n)
                 do
                 {
-
-
                     //Ask the user if they want to roll the dice
                     Console.WriteLine("Do you want to roll the dice?");
                     //Get the users input 
                     response = Console.ReadLine();
-
-
                 } while (response != "y" && response != "n");
 
                 //if the user answered “yes(y) roll the dice 
@@ -63,10 +58,12 @@ namespace Lab_19
                         Console.WriteLine("You rolled double {0}s", die2);
                         counter++;
                     }
-                    else if(response == "n"){
-						Console.WriteLine("Thank you for playing");
-			            Console.ReadLine();
-                        Menu();
+                    else if (response == "n")
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Thank you for playing!");
+                        Console.ReadLine();
+                        Environment.Exit(0);
                     }
                     //else
                     else
@@ -78,9 +75,9 @@ namespace Lab_19
                 }
 
             } while (response != "n");
-  
-         }
-       
+
+        }
+
     }
-    
 }
+
