@@ -218,6 +218,8 @@ namespace TheElementsOfGaming_Game_Library
             else if (solution == "n" || solution == "no")
             {
                 Console.WriteLine("Thanks for playing!");
+                Console.WriteLine("Hit enter to continue");
+                Console.ReadLine();
                 Start();
             }
             else
