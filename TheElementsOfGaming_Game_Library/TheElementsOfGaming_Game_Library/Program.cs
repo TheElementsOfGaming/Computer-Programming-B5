@@ -13,9 +13,10 @@ namespace TheElementsOfGaming_Game_Library
             Console.Clear();
             Console.WriteLine("Choose a game:");
             Console.WriteLine("1) Dice Game");
-            Console.WriteLine("2) Guessing Game");
+            Console.WriteLine("2) Guessings Game");
             Console.WriteLine("3) Higher or Lower");
-            Console.WriteLine("4) Exit");
+            Console.WriteLine("4) TicTacToe");
+            Console.WriteLine("5) Exit");
             string output = Console.ReadLine();
             if (output == "1" || output == "Dice Game")
             {
@@ -32,12 +33,20 @@ namespace TheElementsOfGaming_Game_Library
                 Console.Clear();
                 Higher_Lower();
             }
-            else if (output == "4" || output == "Exit")
+            else if (output == "4" || output == "TicTacToe")
+            {
+                Console.Clear();
+                TicTacToe();
+            }
+            else if (output == "5" || output == "Exit")
             {
                 Environment.Exit(0);
             }
-
-        }
+            else 
+            {
+                Console.Clear();
+                Start();   
+            }
         private static void Dice_Game()
         {
             //create a random number generator
