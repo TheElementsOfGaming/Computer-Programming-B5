@@ -242,7 +242,27 @@ namespace TheElementsOfGaming_Game_Library
             {
                 Higher_Lower();
             }
-        }    
+        }
+        public static void TicTacToe()
+        {
+            Console.WriteLine("Do you want to play TicTacToe?");
+            string resultTic = Console.ReadLine();
+            if (resultTic == "yes" || resultTic == "y")
+            {
+                Console.WriteLine("WIP");
+            }
+            else if (resultTic == "no" || resultTic == "n")
+            {
+                Console.WriteLine("Thanks for playing!");
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
+                Start();
+            }
+            else 
+            {
+                TicTacToe(); 
+            }
+        }
     }
 
 }
