@@ -11,8 +11,7 @@ namespace Lab_19
             //create a string named response
             string response;
             //create a counter
-            int counter = 0;
-            bool display = true;                  
+            int counter = 0;                 
              //create a do loop for the whole program.
             do
             {
@@ -43,6 +42,7 @@ namespace Lab_19
                     if (die1 == 6 && die2 == 6)
                     {
                         //print out you rolled boxcars
+                        counter++;
                         Console.WriteLine("You rolled boxcars!");
                         Console.WriteLine("It took you {0} tries to get boxcars!", counter);
                         counter = 0;
@@ -52,6 +52,7 @@ namespace Lab_19
                     {
 
                         //print out you rolled snake eyes
+                        counter++;
                         Console.WriteLine("You rolled snake eyes!");
                         Console.WriteLine("It took you {0} tries to get snake eyes!", counter);
                         counter = 0;
@@ -64,9 +65,14 @@ namespace Lab_19
                         counter++;
                     }
                     else if(response == "n"){
-						Console.WriteLine("Thank you for playing");
-			            Console.ReadLine();
-                        Menu();
+						//print out thank you for playing.
+                        Console.WriteLine("Thank you for playing");
+                        //print out press enter to continue.
+                        Console.WriteLine("Press enter to continue.");
+                        Console.ReadLine();
+                        //Exits program
+                        Environment.Exit(0);
+
                     }
                     //else
                     else
@@ -84,3 +90,11 @@ namespace Lab_19
     }
     
 }
+
+//Questions on canvas
+
+//Q.(1) Suppose that in your dice game you let the user roll the dice exactly ten times.What kind of loop would you use in this case?
+//A. I would use a for loop for that because that loop is mean't to run a certain amount of times.So, I would have it run of 10. 
+
+//Q(2) Suppose that in your dice game, you let the user keep rolling the dice until a seven was rolled. What kind of loop would you use in this case?
+//A. I would use a do while loop for that because it would run the program until the dice roll a seven. 

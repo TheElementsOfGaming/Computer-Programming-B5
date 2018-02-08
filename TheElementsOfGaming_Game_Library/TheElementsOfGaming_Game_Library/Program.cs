@@ -28,7 +28,7 @@ namespace TheElementsOfGaming_Game_Library
                 Console.Clear();
                 guessing_Game();
             }
-            else if (output == "3"|| output == "Higher or Lower")
+            else if (output == "3" || output == "Higher or Lower")
             {
                 Console.Clear();
                 Higher_Lower();
@@ -42,11 +42,12 @@ namespace TheElementsOfGaming_Game_Library
             {
                 Environment.Exit(0);
             }
-            else 
+            else
             {
                 Console.Clear();
-                Start();   
+                Start();
             }
+        }
         private static void Dice_Game()
         {
             //create a random number generator
@@ -85,6 +86,7 @@ namespace TheElementsOfGaming_Game_Library
                     if (die1 == 6 && die2 == 6)
                     {
                         //print out you rolled boxcars
+                        counter++;
                         Console.WriteLine("You rolled boxcars!");
                         Console.WriteLine("It took you {0} tries to get boxcars!", counter);
                         counter = 0;
@@ -94,6 +96,7 @@ namespace TheElementsOfGaming_Game_Library
                     {
 
                         //print out you rolled snake eyes
+                        counter++;
                         Console.WriteLine("You rolled snake eyes!");
                         Console.WriteLine("It took you {0} tries to get snake eyes!", counter);
                         counter = 0;
@@ -177,14 +180,18 @@ namespace TheElementsOfGaming_Game_Library
             string solution = Console.ReadLine();
             if (solution == "y" || solution == "yes")
             {
-                Console.WriteLine("This is a two player game!");
-                Console.Write("Player one pick a number between 1 and 100:");
+                    Console.WriteLine("This is a two player game!");
+                    Console.WriteLine("Player one what is your name?");
+                    string Player1_Name = Console.ReadLine();
+                    Console.WriteLine("Player two what is your name?");
+                    string Player2_Name = Console.ReadLine();
+                    Console.Write("{0} pick a number between 1 and 100:", Player1_Name);
                 string result2 = Console.ReadLine();
                 int.TryParse(result2, out player1_Num);
                 Console.Clear();
                 do
                 {
-                    Console.Write("Player two guess player one's number:");
+                        Console.Write("{0} guess player one's number:", Player2_Name);
                     string player2_result = Console.ReadLine();
                     counter++;
                     int.TryParse(player2_result, out player2_Guess);
@@ -193,32 +200,32 @@ namespace TheElementsOfGaming_Game_Library
                     else if (player1_Num > 100)
                     {
 
-                        Console.WriteLine("Player 1 your number can't be greater than 100.");
+                            Console.WriteLine("{0} your number can't be greater than 100.", Player1_Name);
                         Console.Write("Pick a new number between 1 amd 100:");
                         result2 = Console.ReadLine();
                         Console.ReadLine();
                        
                     }
                     else if (player1_Num > player2_Guess)
-                        Console.WriteLine("Player 1's number is higher!");
+                            Console.WriteLine("{0}'s number is higher!", Player1_Name);
                     else if (player1_Num < player2_Guess)
-                        Console.WriteLine("Player 1's number is lower!");
+                            Console.WriteLine("{0}'s number is lower!", Player1_Name);
                     else
                         Console.WriteLine("You broke the game.");
                 } while (incorrect);
-                Console.WriteLine("Congrats Player two, you guessed the number right!");
+                    Console.WriteLine("Congrats {0}, you guessed the number right!", Player2_Name);
                     if (counter == 1)
                     {
-                        Console.WriteLine("It took you {0} try to guess player 1's number.", counter);
-                        Console.WriteLine("Player 1's number was {0}.", player1_Num);
+                        Console.WriteLine("It took you {0} try to guess {1}'s number.", counter, Player1_Name);
+                        Console.WriteLine("{0}'s number was {1}.", player1_Num, Player1_Name);
                         Console.WriteLine("Hit enter to continue."); 
                         Console.ReadLine();
                         Higher_Lower();
                     }
                     else
                     {
-                        Console.WriteLine("It took you {0} tries to guess player 1's number.", counter);
-                        Console.WriteLine("Player 1's number was {0}.", player1_Num);
+                        Console.WriteLine("It took you {0} tries to guess {1} number.", counter, Player1_Name);
+                        Console.WriteLine("{0}'s number was {1}.", player1_Num, Player1_Name);
                         Console.WriteLine("Hit enter to continue.");
                         Console.ReadLine();
                         Higher_Lower();
