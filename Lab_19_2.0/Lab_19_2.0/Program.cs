@@ -22,8 +22,8 @@ namespace Lab_19_2._0
                     Console.WriteLine("Do you want to roll the dice?");
                     //Get the users input 
                     response = Console.ReadLine();
+                    Console.WriteLine("Invaild response try again!");
                 } while (response != "y" && response != "n");
-
                 //if the user answered “yes(y) roll the dice 
                 if (response == "y")
                     Console.Clear();
@@ -38,6 +38,7 @@ namespace Lab_19_2._0
                     if (die1 == 6 && die2 == 6)
                     {
                         //print out you rolled boxcars
+                        counter++;
                         Console.WriteLine("You rolled boxcars!");
                         Console.WriteLine("It took you {0} tries to get boxcars!", counter);
                         counter = 0;
@@ -47,6 +48,7 @@ namespace Lab_19_2._0
                     {
 
                         //print out you rolled snake eyes
+                        counter++;
                         Console.WriteLine("You rolled snake eyes!");
                         Console.WriteLine("It took you {0} tries to get snake eyes!", counter);
                         counter = 0;
@@ -72,10 +74,11 @@ namespace Lab_19_2._0
                         Console.WriteLine("You rolled {0} and a {1}", die1, die2);
                         counter++;
                     }
+
                 }
 
             } while (response != "n");
-
+         
         }
 
     }
