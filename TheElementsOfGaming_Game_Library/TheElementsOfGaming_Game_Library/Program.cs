@@ -13,9 +13,10 @@ namespace TheElementsOfGaming_Game_Library
             Console.Clear();
             Console.WriteLine("Choose a game:");
             Console.WriteLine("1) Dice Game");
-            Console.WriteLine("2) Guessing Game");
+            Console.WriteLine("2) Guessings Game");
             Console.WriteLine("3) Higher or Lower");
-            Console.WriteLine("4) Exit");
+            Console.WriteLine("4) TicTacToe");
+            Console.WriteLine("5) Exit");
             string output = Console.ReadLine();
             if (output == "1" || output == "Dice Game")
             {
@@ -27,16 +28,25 @@ namespace TheElementsOfGaming_Game_Library
                 Console.Clear();
                 guessing_Game();
             }
-            else if (output == "3"|| output == "Higher or Lower")
+            else if (output == "3" || output == "Higher or Lower")
             {
                 Console.Clear();
                 Higher_Lower();
             }
-            else if (output == "4" || output == "Exit")
+            else if (output == "4" || output == "TicTacToe")
+            {
+                Console.Clear();
+                TicTacToe();
+            }
+            else if (output == "5" || output == "Exit")
             {
                 Environment.Exit(0);
             }
-
+            else
+            {
+                Console.Clear();
+                Start();
+            }
         }
         private static void Dice_Game()
         {
@@ -76,6 +86,7 @@ namespace TheElementsOfGaming_Game_Library
                     if (die1 == 6 && die2 == 6)
                     {
                         //print out you rolled boxcars
+                        counter++;
                         Console.WriteLine("You rolled boxcars!");
                         Console.WriteLine("It took you {0} tries to get boxcars!", counter);
                         counter = 0;
@@ -85,6 +96,7 @@ namespace TheElementsOfGaming_Game_Library
                     {
 
                         //print out you rolled snake eyes
+                        counter++;
                         Console.WriteLine("You rolled snake eyes!");
                         Console.WriteLine("It took you {0} tries to get snake eyes!", counter);
                         counter = 0;
@@ -162,92 +174,62 @@ namespace TheElementsOfGaming_Game_Library
 
             bool incorrect = true;
 
-            int counter = 10;
+            int counter = 0;
             Console.Clear();
             Console.WriteLine("Do you want to play the higher or lower game?");
             string solution = Console.ReadLine();
             if (solution == "y" || solution == "yes")
             {
-                Console.Clear();
-                Console.WriteLine("This is a two player game!");
-                Console.Clear();
-                Console.Write("What is your name player one?");
-                string Player1_Name = Console.ReadLine();
-                Console.Clear();
-                Console.Write("What is your name player two?");
-                string Player2_name = Console.ReadLine();
-                Console.Clear();
-                Console.Write("{0} pick a number between 1 and 100:",Player1_Name);
+                    Console.WriteLine("This is a two player game!");
+                    Console.WriteLine("Player one what is your name?");
+                    string Player1_Name = Console.ReadLine();
+                    Console.WriteLine("Player two what is your name?");
+                    string Player2_Name = Console.ReadLine();
+                    Console.Write("{0} pick a number between 1 and 100:", Player1_Name);
                 string result2 = Console.ReadLine();
                 int.TryParse(result2, out player1_Num);
                 Console.Clear();
                 do
                 {
-                    if (counter == 0)
+                        Console.Write("{0} guess player one's number:", Player2_Name);
+                    string player2_result = Console.ReadLine();
+                    counter++;
+                    int.TryParse(player2_result, out player2_Guess);
+                    if (player2_Guess == player1_Num)
+                        incorrect = false;
+                    else if (player1_Num > 100)
                     {
-                        Console.Clear();
-                        Console.WriteLine("{0}, you lost. Congrats {1} you win!", Player2_name, Player1_Name);
+
+                            Console.WriteLine("{0} your number can't be greater than 100.", Player1_Name);
+                        Console.Write("Pick a new number between 1 amd 100:");
+                        result2 = Console.ReadLine();
+                        Console.ReadLine();
+                       
+                    }
+                    else if (player1_Num > player2_Guess)
+                            Console.WriteLine("{0}'s number is higher!", Player1_Name);
+                    else if (player1_Num < player2_Guess)
+                            Console.WriteLine("{0}'s number is lower!", Player1_Name);
+                    else
+                        Console.WriteLine("You broke the game.");
+                } while (incorrect);
+                    Console.WriteLine("Congrats {0}, you guessed the number right!", Player2_Name);
+                    if (counter == 1)
+                    {
+                        Console.WriteLine("It took you {0} try to guess {1}'s number.", counter, Player1_Name);
+                        Console.WriteLine("{0}'s number was {1}.", player1_Num, Player1_Name);
+                        Console.WriteLine("Hit enter to continue."); 
+                        Console.ReadLine();
+                        Higher_Lower();
+                    }
+                    else
+                    {
+                        Console.WriteLine("It took you {0} tries to guess {1} number.", counter, Player1_Name);
+                        Console.WriteLine("{0}'s number was {1}.", player1_Num, Player1_Name);
                         Console.WriteLine("Hit enter to continue.");
                         Console.ReadLine();
                         Higher_Lower();
                     }
-                    else if (player1_Num > player2_Guess && counter == 1)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("{0}'s number is higher!", Player1_Name);
-                        Console.WriteLine("{0} you have {1} guess left before {2} wins.", Player2_name, counter, Player1_Name);
-                    }
-                    else if (player1_Num < player2_Guess && counter == 1)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("{0}'s number is lower!", Player1_Name);
-                        Console.WriteLine("{0} you have {1} guess left before {2} wins.", Player2_name, counter, Player1_Name);
-                    }
-                    Console.Write("{0} guess {1}'s number:", Player2_name, Player1_Name);
-                    string player2_result = Console.ReadLine();
-                    counter--;
-                    int.TryParse(player2_result, out player2_Guess);
-
-                    if (player2_Guess == player1_Num)
-                    {
-                        incorrect = false;
-                    }
-                    else if (player1_Num > 100)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("{0} your number can't be greater than 100.", Player1_Name);
-                        Console.Write("Pick a new number between 1 amd 100:");
-                        result2 = Console.ReadLine();
-                        Console.ReadLine();
-
-                    }
-                    else if (player1_Num > player2_Guess)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("{0}'s number is higher!", Player1_Name);
-                        Console.WriteLine("{0} you have {1} guesses left before {2} wins.", Player2_name, counter, Player1_Name);
-                    }
-                    
-                    else if (player1_Num < player2_Guess)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("{0}'s number is lower!", Player1_Name);
-                        Console.WriteLine("{0} you have {1} guesses left before {2} wins.", Player2_name, counter, Player1_Name);
-                    }
-                    else
-                    {
-                        Console.WriteLine("You broke the game.");
-                    }
-
-                } while (incorrect);
-                Console.Clear();
-                Console.WriteLine("Congrats {0}, you guessed the number right!",Player2_name);
-                Console.WriteLine("You had {0} guesses left", counter);
-                Console.WriteLine("{0}'s number was {1}.",Player1_Name, player1_Num);
-                Console.WriteLine("Hit enter to continue.");
-                Console.ReadLine();
-                Higher_Lower();
-                    
             }
             else if (solution == "n" || solution == "no")
             {
@@ -261,26 +243,24 @@ namespace TheElementsOfGaming_Game_Library
                 Higher_Lower();
             }
         }
-        private static void TicTacToe()
+        public static void TicTacToe()
         {
-            Console.Clear();
             Console.WriteLine("Do you want to play TicTacToe?");
-            string product = Console.ReadLine();
-            if (product == "y" || product == "yes")
+            string resultTic = Console.ReadLine();
+            if (resultTic == "yes" || resultTic == "y")
             {
                 Console.WriteLine("WIP");
             }
-            else if (product == "n" || product == "no")
+            else if (resultTic == "no" || resultTic == "n")
             {
-                Console.Clear();
                 Console.WriteLine("Thanks for playing!");
-                Console.WriteLine("Hit enter to continue.");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
                 Start();
             }
-            else
+            else 
             {
-                TicTacToe();
+                TicTacToe(); 
             }
         }
     }
