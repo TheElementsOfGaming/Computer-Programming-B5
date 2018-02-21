@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{9A7A69EC-60CE-4279-82A8-43D88AC38BFF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Classy/Program.cs">
+    <Files>
+      <File FileName="Classy/Program.cs" Line="66" Column="52" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Classy PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
