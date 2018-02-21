@@ -1,5 +1,0 @@
-/Users/56332/Documents/Last Try/Computer-Programming-B5/Classy/Classy/bin/Debug/Classy.exe
-/Users/56332/Documents/Last Try/Computer-Programming-B5/Classy/Classy/bin/Debug/Classy.pdb
-/Users/56332/Documents/Last Try/Computer-Programming-B5/Classy/Classy/obj/x86/Debug/Classy.csproj.CoreCompileInputs.cache
-/Users/56332/Documents/Last Try/Computer-Programming-B5/Classy/Classy/obj/x86/Debug/Classy.exe
-/Users/56332/Documents/Last Try/Computer-Programming-B5/Classy/Classy/obj/x86/Debug/Classy.pdb
