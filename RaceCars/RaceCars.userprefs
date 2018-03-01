@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{BCE2F3CC-B35A-4B02-B43F-A55BB796B731}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="RaceCars/Program.cs">
     <Files>
-      <File FileName="RaceCars/Program.cs" Line="6" Column="5" />
+      <File FileName="RaceCars/Program.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
@@ -9,5 +9,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RaceCars PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>
