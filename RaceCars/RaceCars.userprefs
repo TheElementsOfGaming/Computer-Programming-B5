@@ -1,14 +1,14 @@
-﻿<Properties StartupConfiguration="{9A7A69EC-60CE-4279-82A8-43D88AC38BFF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Classy/Program.cs">
+﻿<Properties StartupConfiguration="{BCE2F3CC-B35A-4B02-B43F-A55BB796B731}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RaceCars/Program.cs">
     <Files>
-      <File FileName="Classy/Program.cs" Line="76" Column="6" />
+      <File FileName="RaceCars/Program.cs" Line="70" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Classy PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.RaceCars PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>

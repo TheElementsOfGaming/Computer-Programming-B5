@@ -1,0 +1,5 @@
+/Users/56332/Documents/Last Try/Computer-Programming-B5/RaceCars/RaceCars/bin/Debug/RaceCars.exe
+/Users/56332/Documents/Last Try/Computer-Programming-B5/RaceCars/RaceCars/bin/Debug/RaceCars.pdb
+/Users/56332/Documents/Last Try/Computer-Programming-B5/RaceCars/RaceCars/obj/x86/Debug/RaceCars.csproj.CoreCompileInputs.cache
+/Users/56332/Documents/Last Try/Computer-Programming-B5/RaceCars/RaceCars/obj/x86/Debug/RaceCars.exe
+/Users/56332/Documents/Last Try/Computer-Programming-B5/RaceCars/RaceCars/obj/x86/Debug/RaceCars.pdb
