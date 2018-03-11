@@ -101,7 +101,7 @@ namespace Classy
             //fish2.flight(5);
 
             Cat cat1 = new Cat();
-            cat1.canfly()
+            cat1.canfly();
 
 
             //Console.WriteLine("Hello World!");
