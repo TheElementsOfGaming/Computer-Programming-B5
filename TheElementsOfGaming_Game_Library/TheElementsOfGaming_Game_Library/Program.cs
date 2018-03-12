@@ -249,7 +249,9 @@ namespace TheElementsOfGaming_Game_Library
             string resultTic = Console.ReadLine();
             if (resultTic == "yes" || resultTic == "y")
             {
-                Console.WriteLine("WIP");
+                Console.WriteLine("WIP" + "Press enter to continue to go back to the start of the game.");
+                Console.ReadLine();
+                Start();
             }
             else if (resultTic == "no" || resultTic == "n")
             {
