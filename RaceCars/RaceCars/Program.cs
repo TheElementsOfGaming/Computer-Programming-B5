@@ -20,8 +20,8 @@ namespace RaceCars
             Location = 0;
             Fuel = 22;
             Speed = 210;
-            Make = "ZR1";
-            Model = "Corvette";
+            Make = "Chevy";
+            Model = "Corvette ZR1";
             Color = "Electic Blue";
             Year = 2019;
             PixelsPerGallon = 50;
@@ -45,7 +45,7 @@ namespace RaceCars
                 Location += Speed;
                 Fuel -= Speed / PixelsPerGallon;
                 Console.WriteLine("Your car is {0} pixels from the start!", Location);
-                Console.WriteLine("Yoou  have {0} gallons of fuel remaining!", Fuel);
+                Console.WriteLine("You  have {0} gallons of fuel remaining!", Fuel);
             }
             else 
             {
@@ -63,10 +63,32 @@ namespace RaceCars
 
             Car Phil = new Car();
             Car Luke = new Car(0, 200, 21, "Dodge", "Viper", 2017, 50, "Sebring Orange");
+            Car Luigi = new Car(0, 75, 25, "Ford", "Pinto", 1981, 40, "Sebring Orange");
+            Car Mario = new Car(0, 125, 21, "Dodge", "Challenger", 2015, 20, "Sebring Orange");
+            //create an array of cars
+            Car[] cars = new Car[4];
+            //Add cars to the array
+            cars[0] = Phil;
+            cars[1] = Luke;
+            cars[2] = Luigi;
+            cars[3] = Mario;
 
-            while(Luke.Location < RACE_LENGTH && Luke.Fuel > 0)
+            for (int i = 0; i < cars.Length; i++)
             {
-                Luke.Drive();
+                Console.WriteLine("Make:{0} Model:{1}", cars[i].Make, cars[i].Model);
+            }
+            //create a random number generator
+            Random randy = new Random();
+
+            //race each car
+
+            foreach (Car theCar in cars)
+            {
+                while (theCar.Location < RACE_LENGTH && theCar.Fuel > 0)
+                {
+                    theCar.Drive();
+
+                }
             }
 
         }
