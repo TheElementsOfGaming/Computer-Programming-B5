@@ -39,9 +39,24 @@ namespace RaceCars
             Color = _color;
         }
     
-        public void Drive() {
+        public void Drive(int hazard) {
             if(Fuel > 0)
             {
+                switch (hazard)
+                {
+                    case 1:
+                        Console.WriteLine("You hit a pothole. Lose 1 turn!");
+
+                        break;
+                    case 2:
+                        Console.WriteLine("A bird hit your windshield, slow down");
+                        Location += Speed / 2;
+                        break;
+                    default:
+                        Location += Speed;
+                        break;
+
+                }
                 Location += Speed;
                 Fuel -= Speed / PixelsPerGallon;
                 Console.WriteLine("Your car is {0} pixels from the start!", Location);
@@ -63,7 +78,7 @@ namespace RaceCars
 
             Car Phil = new Car();
             Car Luke = new Car(0, 200, 21, "Dodge", "Viper", 2017, 50, "Sebring Orange");
-            Car Luigi = new Car(0, 75, 25, "Ford", "Pinto", 1981, 40, "Sebring Orange");
+            Car Luigi = new Car(0, 50, 25, "Ford", "Pinto", 1981, 40, "Sebring Orange");
             Car Mario = new Car(0, 125, 21, "Dodge", "Challenger", 2015, 20, "Sebring Orange");
             //create an array of cars
             Car[] cars = new Car[4];
@@ -86,7 +101,7 @@ namespace RaceCars
             {
                 while (theCar.Location < RACE_LENGTH && theCar.Fuel > 0)
                 {
-                    theCar.Drive();
+                    theCar.Drive(randy.Next(0, 101));
 
                 }
             }
