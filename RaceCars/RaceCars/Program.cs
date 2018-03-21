@@ -77,9 +77,9 @@ namespace RaceCars
             const int RACE_LENGTH = 500;
 
             Car Phil = new Car();
-            Car Luke = new Car(0, 200, 21, "Dodge", "Viper", 2017, 50, "Sebring Orange");
-            Car Luigi = new Car(0, 50, 25, "Ford", "Pinto", 1981, 40, "Sebring Orange");
-            Car Mario = new Car(0, 125, 21, "Dodge", "Challenger", 2015, 20, "Sebring Orange");
+            Car Luke = new Car(0, 200, 21, "Dodge", "Viper", 2017, 50, "Miami Blue");
+            Car Luigi = new Car(0, 2, 25, "Ford", "Pinto", 1981, 40, "Green");
+            Car Mario = new Car(0, 125, 21, "Dodge", "Challenger", 2015, 20, "Red");
             //create an array of cars
             Car[] cars = new Car[4];
             //Add cars to the array
@@ -96,16 +96,14 @@ namespace RaceCars
             Random randy = new Random();
 
             //race each car
-
             foreach (Car theCar in cars)
             {
-                while (theCar.Location < RACE_LENGTH && theCar.Fuel > 0)
+                if (theCar.Location < RACE_LENGTH && theCar.Fuel > 0)
                 {
                     theCar.Drive(randy.Next(0, 101));
 
                 }
             }
-
-        }
+       }
     }
 }
