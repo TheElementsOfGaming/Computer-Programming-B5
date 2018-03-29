@@ -1,0 +1,5 @@
+/Users/56332/Projects/Stringitup/Stringitup/bin/Debug/Stringitup.exe
+/Users/56332/Projects/Stringitup/Stringitup/bin/Debug/Stringitup.pdb
+/Users/56332/Projects/Stringitup/Stringitup/obj/x86/Debug/Stringitup.csproj.CoreCompileInputs.cache
+/Users/56332/Projects/Stringitup/Stringitup/obj/x86/Debug/Stringitup.exe
+/Users/56332/Projects/Stringitup/Stringitup/obj/x86/Debug/Stringitup.pdb
