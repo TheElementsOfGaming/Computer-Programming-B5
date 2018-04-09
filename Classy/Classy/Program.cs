@@ -74,11 +74,6 @@ namespace Classy
             }
         }
     }
-	public void Talk(string message){
-		Process p = Process.Start("/bin/bash", "-c \"say '" + message + "'\" ");
-		Console.WriteLine(message);
-
-	}
     class MainClass
     {
         public static void printMessage(string message)
@@ -101,7 +96,7 @@ namespace Classy
             //fish2.flight(5);
 
             Cat cat1 = new Cat();
-            cat1.canfly();
+            cat1.fly(0);
 
 
             //Console.WriteLine("Hello World!");
