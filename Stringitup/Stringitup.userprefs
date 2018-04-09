@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{4E681193-18DC-45D2-9545-3F78B3979F69}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Stringitup/Program.cs">
     <Files>
-      <File FileName="Stringitup/Program.cs" Line="20" Column="18" />
+      <File FileName="Stringitup/Program.cs" Line="43" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

@@ -22,22 +22,22 @@ namespace Stringitup
 
                 //stringitup
                 //print out 
-                for (int i = 0; i < 3; i++)
-                {
-                    
-                    Console.Write(word);
-                    for (int j = 0; j < 2; j++)
+                    for (int j = 0; j < 3; j++)
                     {
-                        Console.Write(" ");
-                        Console.Write(word.Substring(word.Length-2, 2));
-                        
+                    Console.Write(word);
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Console.Write(" {0}", word.Substring(word.Length - 2, 2));
                     }
-                    Console.WriteLine("");
+                    Console.WriteLine();
                 }
+                    Console.WriteLine("I'm on Fire!");
                 Console.WriteLine("Again? (y/n)");
                 response = Console.ReadLine().ToLower();
             }
-            
+
+            string theWord = "The quick brown fox jumps over the lazy dog.";
+            Console.WriteLine(" {0}", theWord.Substring(theWord.Length -34, 9));
         }
        /* public static void Backwards(string word) {
             for (int i = word.Length-1; i >= 0; i--)
