@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{E07B73AC-39C6-4D77-8D8A-1A1CB6DF6C74}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lab23/Lab_23">
+    <Files>
+      <File FileName="Lab23/Lab_23" Line="21" Column="23" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Lab23 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

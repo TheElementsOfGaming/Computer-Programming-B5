@@ -1,0 +1,5 @@
+/Users/56332/Projects/Lab23/Lab23/bin/Debug/Lab23.exe
+/Users/56332/Projects/Lab23/Lab23/bin/Debug/Lab23.pdb
+/Users/56332/Projects/Lab23/Lab23/obj/x86/Debug/Lab23.csproj.CoreCompileInputs.cache
+/Users/56332/Projects/Lab23/Lab23/obj/x86/Debug/Lab23.exe
+/Users/56332/Projects/Lab23/Lab23/obj/x86/Debug/Lab23.pdb

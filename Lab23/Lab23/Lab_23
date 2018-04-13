@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace Lab23
+{
+    class MainClass
+    {
+        //some class level constants
+        const int HALVES = 50;
+        const int QUARTERS = 25;
+        const int DIMES = 10;
+        const int NICKELS = 5;
+        const int PENNIES = 1;
+        public static void Main(string[] args)
+        {
+            Print();
+
+        }
+        public static void Print()
+        {
+
+            int money; // the value we want to count change for 
+            Console.WriteLine("Kyler Draper");
+            Console.WriteLine("Computer Programming B5");
+            Console.WriteLine("Lab 23");
+            Console.WriteLine("================================================");
+            Console.Title = "Lab 23 Passing by Value and Passing by Reference © Kyler Draper";
+            Console.WriteLine("Press enter to continue");
+            Console.ReadLine();
+
+        }
+    }
+}
