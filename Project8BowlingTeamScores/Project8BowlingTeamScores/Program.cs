@@ -32,47 +32,96 @@ namespace Project8BowlingTeamScores
             int[] scores = new int[MAX_PLAYERS];
             int count = 0;
             string line = "";
-            //Write a do loop to get the user input 
-            do
+			//Write a do loop to get the user input 
+			//the input should be the name followed by 
+			//a space and the the score
+			do
             {
                 Console.Write("Enter a name and a score:");
                 line = Console.ReadLine();
-                count++;
-                //the input should be the name followed by 
-                //a spcae and the the score
-            } while (line != string.Empty && count < MAX_PLAYERS);
-            //Split the user input into name and a score ans store 
-            //each in a names and scores array
+                if(line.Length > 0) 
+                {
+					//Split the user input into name and a score ans store 
+					//each in a names and scores array
+					string[] values = line.Split();
+					names[count] = values[0];
+					int.TryParse(values[1], out scores[count]);
+					count++;
+                }
+				//Run the do loop as long as the user entry is not an 
+				//empty line and (&&) the count is less than or equal to 
+				//ten
+			} while (line != string.Empty && count < MAX_PLAYERS);
 
-            //Run the do loop as long as the user entry is not an 
-            //empty line and (&&) the count is less than or equal to 
-            //ten
 
             Console.WriteLine("------------INPUT COMPLETE-------------");
 
             //Print out each player's name and score
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("{0} scored {1} points", names[i], scores[i]);
+            }
+            //Console.WriteLine("The player who scored the most points is {0} with {1} points",);
 
-            //Determine and print out the player with the highest score 
-            //Call the HighScore Function
             //Determine ad print out the player with the lowest score 
             //Call the lowScore function
             //Determine and print out the average score
             //Call the aveScore function
         }
-        public static int HighScore(int[] scores, int count)
+		//Determine and print out the player with the highest score 
+		//Call the HighScore Function
+		public static int HighScore(int[] scores, int count)
         {
             int max = -1;
             int maxdex = -1;
+            //loop through the array indexes
+            //check to see if ant of the scores
+            //are greater than the max
             for (int i = 0; i < count; i++)
             {
                 if(max < scores[i])
                 {
+                    //if the score in the array is larger than 
+                    //max then set max = to scores[i[
                     max = scores[i];
+                    //set the maxdex to i
                     maxdex = i;
                 }
             }
+            //send the maxdex back to the main to be used. 
             return maxdex;
+
         }
+        //Returns the minium score index in the scores array
+        public static int MinScore(int[] scores, int count)  
+        {
+            int low = -1;
+            int lowdex = -1;
+            for (int i = 0; i < count; i++)
+            {
+                if(low > scores[i])
+                {
+                    low = scores[i];
+                    lowdex = i;
+                }
+            }
+            return lowdex;
+        }
+        //Returns the average of the bowling scores recorded
+        //today
+        public static int AverageScore(int[] scores, int count)
+        {
+            int total = 0;
+            int average = 0;
+            for (int i = 0; i < count; i++)
+            {
+                total += scores[i];
+            }
+            average = total / count;
+            return average;
+        }
+
     }
+
 
 }
