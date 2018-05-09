@@ -45,7 +45,8 @@ namespace Project8BowlingTeamScores
 					//each in a names and scores array
 					string[] values = line.Split();
 					names[count] = values[0];
-					int.TryParse(values[1], out scores[count]);
+
+                    int.TryParse(values[1], out scores[count]);
 					count++;
                 }
 				//Run the do loop as long as the user entry is not an 
@@ -61,15 +62,24 @@ namespace Project8BowlingTeamScores
             {
                 Console.WriteLine("{0} scored {1} points", names[i], scores[i]);
             }
-            //Console.WriteLine("The player who scored the most points is {0} with {1} points",);
-
-            //Determine ad print out the player with the lowest score 
+            //Determine and print out the player with the lowest score 
             //Call the lowScore function
+            Console.WriteLine("");
+            Console.WriteLine("Congratulations {0} your score of {1} was the highest.",
+                             names[HighScore(scores,count)],scores[HighScore(scores, count)]);
             //Determine and print out the average score
-            //Call the aveScore function
+            //Call the averageScore function
+            Console.WriteLine("");
+            Console.WriteLine("{0}, your score of {1} was the lowest, better get some practice.", 
+                              names[MinScore(scores,count)], scores[MinScore(scores,count)]);
+            //Determine and print out the player with the highest score 
+            //Call the HighScore Function
+            Console.WriteLine("");
+            Console.WriteLine("The average score for this game was {0}",
+                              AverageScore(scores, count));
         }
-		//Determine and print out the player with the highest score 
-		//Call the HighScore Function
+ 
+
 		public static int HighScore(int[] scores, int count)
         {
             int max = -1;
@@ -95,8 +105,8 @@ namespace Project8BowlingTeamScores
         //Returns the minium score index in the scores array
         public static int MinScore(int[] scores, int count)  
         {
-            int low = -1;
-            int lowdex = -1;
+            int low = 0;
+            int lowdex = 0;
             for (int i = 0; i < count; i++)
             {
                 if(low > scores[i])
