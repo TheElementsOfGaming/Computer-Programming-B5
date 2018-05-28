@@ -77,6 +77,7 @@ namespace Project8BowlingTeamScores
             Console.WriteLine("");
             Console.WriteLine("The average score for this game was {0}",
                               AverageScore(scores, count));
+		Console.ReadLine();
         }
  
 
@@ -105,8 +106,8 @@ namespace Project8BowlingTeamScores
         //Returns the minium score index in the scores array
         public static int MinScore(int[] scores, int count)  
         {
-            int low = 0;
-            int lowdex = 0;
+            int low = 300;
+            int lowdex = 300;
             for (int i = 0; i < count; i++)
             {
                 if(low > scores[i])
