@@ -77,11 +77,7 @@ namespace Project8BowlingTeamScores
             Console.WriteLine("");
             Console.WriteLine("The average score for this game was {0}",
                               AverageScore(scores, count));
-<<<<<<< Updated upstream
-		Console.ReadLine();
-=======
             Console.ReadLine();
->>>>>>> Stashed changes
         }
  
 
