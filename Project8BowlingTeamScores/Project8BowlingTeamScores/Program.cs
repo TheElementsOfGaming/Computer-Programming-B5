@@ -106,8 +106,8 @@ namespace Project8BowlingTeamScores
         //Returns the minium score index in the scores array
         public static int MinScore(int[] scores, int count)  
         {
-            int low = 300;
-            int lowdex = 300;
+            int low = 301;
+            int lowdex = -1;
             for (int i = 0; i < count; i++)
             {
                 if(low > scores[i])
